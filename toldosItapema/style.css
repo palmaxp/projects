@@ -7,7 +7,7 @@ body {
 #header {
   position: fixed;
   top: 0;
-  background-color: rgb(236, 221, 16);
+  background-color: #fff34a;
   height: 48px;
   width: 100%;
   font-size: 17px;
@@ -25,5 +25,34 @@ body {
 }
 .und {
   text-decoration: none;
-  color: rgb(36, 2, 75);
+  color: black;
+}
+#header2 {
+  width: auto;
+  height: 48px;
+  margin-top: 48px;
+  background-color: #ff534a;
+}
+#subtitle {
+  margin: 0;
+  padding: 17px;
+  text-align: center;
+  color: white;
+}
+#linkSB {
+  text-decoration: none;
+  color: white;
+}
+#linkSB:hover {
+  text-decoration: underline;
+}
+#content {
+  display: flex;
+  width: auto;
+  height: 1500px;
+  background-color: #000000;
+}
+#slogan {
+  color: white;
+  font-size: 30px;
 }
