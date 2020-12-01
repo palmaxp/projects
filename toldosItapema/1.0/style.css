@@ -7,16 +7,16 @@ body {
 #header {
   position: fixed;
   top: 0;
-  background-color: #fff34a;
+  background-color: #0a0f0d;
   height: 48px;
   width: 100%;
   font-size: 17px;
 }
 .box {
+  display: flex;
   width: 50%;
   height: 48px;
   margin: auto;
-  display: flex;
   justify-content: space-around;
 }
 #logo {
@@ -25,34 +25,42 @@ body {
 }
 .und {
   text-decoration: none;
-  color: black;
+  color: #fbfbfb;
 }
 #header2 {
+  outline: 1px solid red;
   width: auto;
-  height: 48px;
-  margin-top: 48px;
-  background-color: #ff534a;
+  height: 44px;
+  margin-top: 44px;
+  background-color: #ee4266;
 }
 #subtitle {
   margin: 0;
   padding: 17px;
   text-align: center;
-  color: white;
+  color: #fbfbfb;
 }
 #linkSB {
   text-decoration: none;
-  color: white;
+  color: #fbfbfb;
 }
 #linkSB:hover {
   text-decoration: underline;
 }
 #content {
-  display: flex;
   width: auto;
   height: 1500px;
-  background-color: #000000;
+  background-color: #0a0f0d;
+  padding-top: 30px;
+}
+#boxSlogan {
+  width: 60%;
 }
 #slogan {
-  color: white;
+  padding: 0;
+  margin: 0;
+  color: #fbfbfb;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
 }
