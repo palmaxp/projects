@@ -19,7 +19,7 @@ public class Consultar {
             } else{
                 System.out.println("Esse valor não existe");
                 System.out.println("");
-                 try { Thread.sleep (3000); } catch (InterruptedException ex) {}
+                try { Thread.sleep (3000); } catch (InterruptedException ex) {}
                 Consultar.DDDNumero();
             }            
         }
