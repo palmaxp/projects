@@ -37,7 +37,7 @@ public class Cadastrar {
                         System.out.println("Aguarde...");
                         try { Thread.sleep (3000); } catch (InterruptedException ex) {}
                         Agenda.LimparTela();
-                        Cadastrar.Usuario();
+                        Cadastrar.outroNum();
                     }
                     if(Agenda.numero2.contains(numero2)){
                         Agenda.LimparTela();
@@ -52,6 +52,7 @@ public class Cadastrar {
                     }
                     break;
                 case "2":
+                    Agenda.numero2.add("");
                     break;
                 default:
                     System.out.println("Essa opção não existe");
