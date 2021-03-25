@@ -7,7 +7,8 @@ public class Cadastrar {
    public static String nome = "";
    public static String ddd = "";
    public static String numero = "";
-   public static String numero2 = "";   
+   public static String numero2 = "";  
+   public static int reset = 0;
    public static Scanner sc = new Scanner(System.in);
    public static void Usuario(){
         System.out.println("Bem vindo ao cadastro de usuários");
@@ -37,7 +38,7 @@ public class Cadastrar {
                         System.out.println("Aguarde...");
                         try { Thread.sleep (3000); } catch (InterruptedException ex) {}
                         Agenda.LimparTela();
-                        Cadastrar.outroNum();
+                        outroNum();
                     }
                     if(Agenda.numero2.contains(numero2)){
                         Agenda.LimparTela();
@@ -59,51 +60,48 @@ public class Cadastrar {
                     outroNum();
             }
         }
-   
-   
-    public static void Verificar(){
-        if(Agenda.nome.contains(nome)){
-            Agenda.LimparTela();
-            System.out.println("Este nome já está cadastrado");
+    public static void Resetar(){
+        if(reset == 1 ){
             System.out.println("");
             System.out.println("Aguarde...");
-            try { Thread.sleep (3000); } catch (InterruptedException ex) {}
+            try { Thread.sleep (4000); } catch (InterruptedException ex) {}
             Agenda.LimparTela();
             Cadastrar.Usuario();
-        }else{
+        }
+    }   
+    public static void Verificar(){
+        Agenda.LimparTela();
+        if(Agenda.nome.contains(nome)){
+            System.out.println("Este nome já está cadastrado");
+            try { Thread.sleep (1000); } catch (InterruptedException ex) {}
+            reset = 1;
+        }else if(nome.length() < 5){
+            System.out.println("Não é possivel cadastrar nomes com menos de 5 caracteres");
+            try { Thread.sleep (1000); } catch (InterruptedException ex) {}
+            reset = 1;
+        }else {
             Agenda.nome.add(nome);
         }        
         if(ddd.length() == 2){
             Agenda.ddd.add(ddd);
         }else{
-            Agenda.LimparTela();
             System.out.println("Isto não é um DDD");
-            System.out.println("");
-            System.out.println("Aguarde...");
-            try { Thread.sleep (3000); } catch (InterruptedException ex) {}
-            Agenda.LimparTela();
-            Cadastrar.Usuario();
+            try { Thread.sleep (1000); } catch (InterruptedException ex) {}
+            reset = 1;
         }        
         if(numero.length() < 7){
-            Agenda.LimparTela();
             System.out.println("Isto não é um número");
-            System.out.println("");
-            System.out.println("Aguarde...");
-            try { Thread.sleep (3000); } catch (InterruptedException ex) {}
-            Agenda.LimparTela();
-            Cadastrar.Usuario();
+            try { Thread.sleep (1000); } catch (InterruptedException ex) {}
+            reset = 1;
         }
         if(Agenda.numero.contains(numero)){
-            Agenda.LimparTela();
             System.out.println("Este número já esta cadastrado");
-            System.out.println("");
-            System.out.println("Aguarde...");
-            try { Thread.sleep (3000); } catch (InterruptedException ex) {}
-            Agenda.LimparTela();
-            Cadastrar.Usuario();
+            try { Thread.sleep (1000); } catch (InterruptedException ex) {}
+            reset = 1;
         }else{
             Agenda.numero.add(numero);
         }
+        Resetar();
         outroNum();
         Agenda.LimparTela();
         System.out.println("Usuário Cadastrado com sucesso");
