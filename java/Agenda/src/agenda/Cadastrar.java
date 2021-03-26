@@ -53,9 +53,6 @@ public class Cadastrar {
         if(reset == 0){
             reset = 0;
             Agenda.LimparTela();  
-            Agenda.nome.add(nome);
-            Agenda.numero.add(numero);
-            Agenda.ddd.add(ddd);
             Cadastrar2Numero();
         }
         if(reset == 1){
@@ -68,6 +65,10 @@ public class Cadastrar {
         }
         if(reset == 2){
             reset = 0;
+            Agenda.nome.add(nome);
+            Agenda.numero.add(numero);
+            Agenda.numero2.add(numero2);
+            Agenda.ddd.add(ddd);
             Agenda.LimparTela();
             System.out.println("Usuário Cadastrado com sucesso");
             System.out.println("");
@@ -95,7 +96,7 @@ public class Cadastrar {
                         Agenda.LimparTela();
                         Cadastrar2Numero();
                     }
-                    if(Agenda.numero2.contains(numero2) || Agenda.numero.contains(numero2)){
+                    if(Agenda.numero2.contains(numero2) || numero.contains(numero2)){
                         Agenda.LimparTela();
                         System.out.println("Este número já esta cadastrado");
                         System.out.println("");
@@ -104,14 +105,13 @@ public class Cadastrar {
                         Agenda.LimparTela();
                         Cadastrar2Numero();
                     }else{
-                        Agenda.numero2.add(numero2);
                         reset = 2;
                         Direcionar();
                     }
                     break;
                 case "2":
-                    Agenda.numero2.add("");
                     reset = 2;
+                    numero2 = "";
                     Direcionar();
                     break;
                 default:
