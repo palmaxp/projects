@@ -44,8 +44,8 @@ public class Consultar {
             }else{
                 System.out.println("Esse valor não existe");
                 System.out.println("");
-                 try { Thread.sleep (3000); } catch (InterruptedException ex) {}
-                Consultar.DDDNumero();
+                try { Thread.sleep (3000); } catch (InterruptedException ex) {}
+                Menu.NavegarConsultar();
             }  
         }
         System.out.println("");
@@ -68,8 +68,8 @@ public class Consultar {
             }else{
                 System.out.println("Esse valor não existe");
                 System.out.println("");
-                 try { Thread.sleep (3000); } catch (InterruptedException ex) {}
-                Consultar.DDDNumero();
+                try { Thread.sleep (3000); } catch (InterruptedException ex) {}
+                Menu.NavegarConsultar();
             } 
         }
         System.out.println("");
