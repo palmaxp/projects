@@ -1,6 +1,5 @@
 let contar = document.getElementById("contar");
 let num = 1;
-let rule = 0;
 
 let play = function () {
   document.getElementById("audio").play();
@@ -19,15 +18,13 @@ function resetar() {
   window.location.reload();
 }
 function x2(element) {
-  if (rule == 0 && contar.textContent >= 30) {
-    let x2 = document.getElementById("x2");
+  if (num == 1 && contar.textContent >= 30) {
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 30;
     num = 2;
-    rule = 2;
     element.setAttribute("class", "BS");
-  } else if (rule > 0) {
-    alert("Você já ativou isso");
+  } else if (num >= 2) {
+    alert("Opção já ativada");
     document.getElementById("audio3").play();
   } else {
     alert("Tenha pelo menos 30 clicks");
@@ -35,14 +32,13 @@ function x2(element) {
   }
 }
 function x3(element) {
-  if (rule < 3 && contar.textContent >= 100) {
+  if (num < 3 && contar.textContent >= 100) {
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 100;
     num = 3;
-    rule = 3;
     element.setAttribute("class", "BS");
-  } else if (rule == 3) {
-    alert("Você já ativou isso");
+  } else if (num >= 3) {
+    alert("Opção já ativada");
     document.getElementById("audio3").play();
   } else {
     alert("Tenha pelo menos 100 clicks");
@@ -50,14 +46,13 @@ function x3(element) {
   }
 }
 function x5(element) {
-  if (rule < 5 && contar.textContent >= 300) {
+  if (num < 5 && contar.textContent >= 300) {
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 300;
     num = 5;
-    rule = 5;
     element.setAttribute("class", "BS");
-  } else if (rule == 5) {
-    alert("Você já ativou isso");
+  } else if (num >= 5) {
+    alert("Opção já ativada");
     document.getElementById("audio3").play();
   } else {
     alert("Tenha pelo menos 300 clicks");
