@@ -1,9 +1,5 @@
 function geradorDeCPF() {
   const cpf = [];
-  let valor = 0;
-  let dig = 0;
-  let sabino = cpf.length + 1;
-  let i = 0;
 
   function gerar9digitos() {
     for (let i = 0; i < 9; i++) {
@@ -15,23 +11,23 @@ function geradorDeCPF() {
         cpf[i]++;
       }
     }
-    ultDig();
+    lastDig();
   }
-  function ultDig() {
-    for (let count = 0; count > 2; count++) {
-      for (let count = sabino; count >= 2; count--) {
+  function lastDig() {
+    for (let count = 0; count < 2; count++) {
+      let dig = 0;
+      let valor = 0;
+      let i = 0;
+      for (let count = cpf.length + 1; count >= 2; count--) {
         valor += cpf[i] * count;
         i++;
-
-        dig = valor % 11;
-        dig = 11 - dig;
-        if (dig >= 10 || dig <= 0) {
-          dig = 0;
-        }
-        cpf.push(dig);
-        sabino++;
-        dig();
       }
+      dig = valor % 11;
+      dig = 11 - dig;
+      if (dig >= 10 || dig <= 0) {
+        dig = 0;
+      }
+      cpf.push(dig);
     }
   }
   gerar9digitos();

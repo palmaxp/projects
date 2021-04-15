@@ -25,10 +25,12 @@ function geradorDeCPF() {
       i++;
     }
     dig1 = valor1 % 11;
+    console.log(dig1);
     dig1 = 11 - dig1;
     if (dig1 >= 10 || dig1 <= 0) {
       dig1 = 0;
     }
+    console.log(dig1);
     cpf.push(dig1);
     dig11();
   }
@@ -44,6 +46,7 @@ function geradorDeCPF() {
     if (dig2 >= 10 || dig2 <= 0) {
       dig2 = 0;
     }
+    cpf.push(dig2);
   }
   gerar9digitos();
   console.log(cpf);
