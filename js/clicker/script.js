@@ -60,7 +60,7 @@ function x5(element) {
     alert("Você já ativou isso");
     document.getElementById("audio3").play();
   } else {
-    alert("Tenha pelo menos 500 clicks");
+    alert("Tenha pelo menos 300 clicks");
     document.getElementById("audio3").play();
   }
 }
