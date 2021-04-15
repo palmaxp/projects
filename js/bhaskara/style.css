@@ -2,11 +2,6 @@ body {
   background-color: rgb(226, 226, 226);
   padding: 0;
   margin: 0;
-  @font-face {
-    font-family: Menthari;
-    src: url(./pasta/Menthari.otf);
-  }
-  font-style: normal;
 }
 
 .borda {
