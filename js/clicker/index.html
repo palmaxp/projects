@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Teste</title>
+  </head>
+  <body>
+    <audio
+      id="audio"
+      src="https://www.soundjay.com/button/sounds/button-50.mp3"
+    ></audio>
+    <audio
+      id="audio2"
+      src="https://www.soundjay.com/button/sounds/button-3.mp3"
+    ></audio>
+    <audio
+      id="audio3"
+      src="https://www.soundjay.com/button/sounds/button-10.mp3"
+    ></audio>
+    <div class="left">
+      <p id="contar">0</p>
+      <div class="btn" onClick="clicar()">
+        <p class="btn-txt">Click</p>
+      </div>
+      <div class="btn" id="resetar" onClick="resetar()">
+        <p class="btn-txt">Resetar</p>
+      </div>
+    </div>
+    <div class="right">
+      <div id="bar">
+        <ul>
+          <li id="x2" onClick="x2(this)">
+            <p>Click 2X - Valor - 30</p>
+          </li>
+          <li id="x3" onClick="x3(this)">
+            <p>Click 3X - Valor - 100</p>
+          </li>
+          <li id="x5" onClick="x5(this)">
+            <p>Click 5X - Valor - 300</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
