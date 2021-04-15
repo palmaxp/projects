@@ -23,8 +23,7 @@ function x2(element) {
     let x2 = document.getElementById("x2");
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 30;
-    num = 1;
-    num *= 2;
+    num = 2;
     rule = 2;
     element.setAttribute("class", "BS");
   } else if (rule > 0) {
@@ -39,8 +38,7 @@ function x3(element) {
   if (rule < 3 && contar.textContent >= 100) {
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 100;
-    num = 1;
-    num *= 3;
+    num = 3;
     rule = 3;
     element.setAttribute("class", "BS");
   } else if (rule == 3) {
@@ -55,8 +53,7 @@ function x5(element) {
   if (rule < 5 && contar.textContent >= 300) {
     document.getElementById("audio2").play();
     contar.textContent = contar.textContent - 300;
-    num = 1;
-    num *= 5;
+    num = 5;
     rule = 5;
     element.setAttribute("class", "BS");
   } else if (rule == 5) {
