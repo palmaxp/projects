@@ -48,14 +48,19 @@ p {
 .left {
   float: left;
   background-color: rgb(102, 102, 218);
-  width: 33%;
+  width: 33.333%;
+  height: 1080px;
+}
+.middle {
+  clear: both;
+  display: inline-block;
+  width: 33.333%;
   height: 1080px;
 }
 .right {
   background-color: rgb(102, 102, 218);
   float: right;
-  display: block;
-  width: 33%;
+  width: 33.333%;
   height: 1080px;
 }
 #bar {

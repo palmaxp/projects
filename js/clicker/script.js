@@ -1,10 +1,8 @@
 let contar = document.getElementById("contar");
 let num = 1;
 
-let play = function () {
-  document.getElementById("audio").play();
-};
 onload = function () {
+  document.getElementById("audio4").play();
   let valor = localStorage.getItem("valor");
   contar.innerHTML = valor;
 };
