@@ -1,7 +1,6 @@
 let inputAdultos = document.getElementById("adultos");
 let inputCriancas = document.getElementById("criancas");
 let inputDuracao = document.getElementById("duracao");
-
 let resultado = document.getElementById("resultado");
 
 function calcular() {
@@ -21,7 +20,21 @@ function calcular() {
   let qtdTotalCarne = carne * ad + (carne / 2) * cr;
   let qtdTotalCerveja = cerveja * ad;
   let qtdTotalRefri = refri * ad + (refri / 2) * cr;
-  console.log(qtdTotalCarne);
-  console.log(qtdTotalCerveja);
-  console.log(qtdTotalRefri);
+
+  resultado.innerHTML = `<h2>Você vai precisar de:</h2>
+  <div class="result-box">
+    <img src="./imgs/carne.svg" />
+    <p class="result-info">${qtdTotalCarne / 1000} Kg de Carne</p>
+  </div>
+  <div class="result-box">
+    <img src="./imgs/cerveja.svg" />
+    <p class="result-info">${Math.ceil(
+      qtdTotalCerveja / 355
+    )} latas de cerveja</p>
+  </div>
+  <div class="result-box">
+    <img src="./imgs/refri.svg" />
+    <p class="result-info">${qtdTotalRefri / 2000} garrafas de refri</p>
+  </div>
+  `;
 }
