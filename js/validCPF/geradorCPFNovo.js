@@ -31,6 +31,8 @@ function geradorDeCPF() {
     }
   }
   gerar9digitos();
-  console.log(cpf);
+  for (let i = 0; i < cpf.length; i++) {
+    console.log(cpf[i]);    
+  }
 }
 geradorDeCPF();
