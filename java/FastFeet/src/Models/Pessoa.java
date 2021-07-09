@@ -5,21 +5,24 @@ import java.security.MessageDigest;
 
 public class Pessoa {
 
-    public Pessoa(String usuario, String senha, String telefone, Endereco cod_endereco) {
-        this.usuario = usuario;
-        this.senha = senha;
-        this.telefone = telefone;
-        this.cod_endereco = cod_endereco;
-    }
+    public static boolean criptografarSenha;
 
-    public Pessoa(int codigo, String usuario, String telefone, Endereco cod_endereco) {
+    // buscar
+    public Pessoa(String usuario, String telefone, int codigo, Endereco cod_endereco) {
         this.codigo = codigo;
         this.usuario = usuario;
         this.telefone = telefone;
         this.cod_endereco = cod_endereco;
     }
-        
-    public static boolean criptografarSenha;    
+
+    // inserir
+    public Pessoa(String usuario, String telefone, Endereco cod_endereco, String senha) {
+        this.usuario = usuario;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.cod_endereco = cod_endereco;
+    }
+   
     private int codigo;
     private String usuario;
     private String senha;

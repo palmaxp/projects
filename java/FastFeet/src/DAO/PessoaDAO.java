@@ -1,7 +1,6 @@
 package DAO;
 
 import Models.Pessoa;
-import Models.Endereco;
 import Utils.ConexaoBanco;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class PessoaDAO {
+
     public static int inserirPessoa(Pessoa pessoa) {
         String sql = "INSERT INTO pessoa(usuario, telefone, senha)VALUES (?,?,?)";
         Connection conexao = ConexaoBanco.criarConexao();
@@ -38,11 +38,11 @@ public class PessoaDAO {
             PreparedStatement stm = conexao.prepareStatement(sql);
             ResultSet resultado = stm.executeQuery();
             while (resultado.next()) {
-                int codigo = resultado.getInt("cod_pessoa");
                 String usuario = resultado.getString("usuario");
                 String telefone = resultado.getString("telefone");
-                Endereco end = EnderecoDAO.buscarEndPorId(resultado.getInt("cod_endereco"));
-                Pessoa p1 = new Pessoa(codigo, usuario, telefone, end);
+                int codigo = resultado.getInt("cod_pessoa");
+                int cod_endereco = resultado.getInt("cod_endereco");
+                Pessoa p1 = new Pessoa(usuario, telefone);
                 listaPessoa.add(p1);
             }
         } catch (SQLException e) {
